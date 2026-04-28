@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: person_service
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    password: admin
+    username: admin
+    url: jdbc:postgresql://localhost:5436/person_db
+
+  kafka:
+    producer:
+      acks: all
+      retries: 3
+      bootstrap-servers: localhost:9092
+      topics: person-topic
+
+server:
+  port: 8081
+
+

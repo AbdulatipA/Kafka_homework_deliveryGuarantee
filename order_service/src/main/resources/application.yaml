@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: order_service
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    password: admin
+    username: admin
+    url: jdbc:postgresql://localhost:5437/order_db
+
+  kafka:
+    consumer:
+      isolation-level: read_committed
+      topics: person-topic
+      group-id: order-group
+      bootstrap-servers: localhost:9092
+      properties:
+        spring.json.trusted.packages: "*"
+
+server:
+  port: 8082
