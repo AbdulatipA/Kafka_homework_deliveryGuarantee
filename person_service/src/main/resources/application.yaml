@@ -12,8 +12,6 @@ spring:
 
   kafka:
     producer:
-      acks: all
-      retries: 3
       bootstrap-servers: localhost:9092
       topics: person-topic
 
